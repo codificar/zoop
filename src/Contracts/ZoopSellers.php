@@ -52,7 +52,7 @@ interface ZoopSellers{
      * @param $sellerID string
      * @param $files array
      */
-    public function sendDocs($sellerID, $files);
+    public function sendDocs($sellerID, $files, $docType);
 
     /**
      * Get doc details
