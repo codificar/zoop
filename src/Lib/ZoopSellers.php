@@ -91,4 +91,15 @@ class ZoopSellers implements \Zoop\Contracts\ZoopSellers {
         $api = 'sellers/' . $sellerID . '/documents';
         return $this->APIResource->searchAPI($api);
     }
+
+    /**
+     * @param string $sellerID
+     * @param array $post
+     *
+     * @return mixed
+     */
+    public function editIndividuals($sellerID, $post){
+        $api = 'sellers/individuals/' . $sellerID;
+        return $this->APIResource->updateAPI($api, $post);
+    }
 }
