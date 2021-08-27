@@ -84,7 +84,7 @@ class APIResource{
             if(is_array($files)){
                 throw new ZoopException('You can only upload one file per request! Array given...');
             }else{
-                if(filesize($files) > 250000) throw new ZoopException('You can only send files with 250 kbytes of size.');
+                if(filesize($files) > 5000000) throw new ZoopException('You can only send files with 250 kbytes of size.');
 
                 if(!is_file($files)) throw new ZoopException('Looks like this is not a file...');
 
